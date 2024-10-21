@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import '../App.css'; // Assuming you have a CSS file for styling
+import './LoginPage.css'; // CSS file for styling
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
@@ -9,7 +9,7 @@ const LoginPage = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Add your login logic here
+    // Login logic here
     console.log("Username:", username);
     console.log("Password:", password);
   };
@@ -18,8 +18,8 @@ const LoginPage = () => {
     <div className="login-container">
       <div className="login-form">
         <div className="logo-section">
-          <img src="default.jpg" alt="HealthStack Logo" className="logo" />
-          <h2>HealthStack</h2>
+          <img src="default.jpg" alt="WellnessTrack Logo" className="logo" />
+          <h2>WellnessTrack</h2>
         </div>
         <form onSubmit={handleLogin}>
           <h3>Login Patient</h3>
@@ -65,11 +65,13 @@ const LoginPage = () => {
             <br />
             <Link to="/register">Don't have an account? Register</Link>
             <br />
+            <Link to="/doctor-login">Are you a Doctor?</Link>
+            <br />
             <Link to="/admin-login">Want to login as Admin?</Link>
           </div>
         </form>
         <div className="contact-info">
-          <p>Contact: +880 1234 567890</p>
+          <p>Contact: +1 (604) 123-456</p>
         </div>
       </div>
       <div className="illustration-section">

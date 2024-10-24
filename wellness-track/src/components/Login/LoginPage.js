@@ -11,7 +11,7 @@ const LoginPage = () => {
     e.preventDefault();
     // Login logic here
 
-    
+
     console.log("Username:", username);
     console.log("Password:", password);
   };
@@ -63,13 +63,8 @@ const LoginPage = () => {
             Login
           </button>
           <div className="extra-links">
-            <Link to="/forgot-password">Forgot Password?</Link>
-            <br />
             <Link to="/register">Don't have an account? Register</Link>
             <br />
-            <Link to="/doctor-login">Are you a Doctor?</Link>
-            <br />
-            <Link to="/admin-login">Want to login as Admin?</Link>
           </div>
         </form>
         <div className="contact-info">

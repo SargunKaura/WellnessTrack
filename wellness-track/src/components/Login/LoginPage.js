@@ -12,6 +12,8 @@ const LoginPage = () => {
     // Login logic here
 
 
+
+
     console.log("Username:", username);
     console.log("Password:", password);
   };
@@ -21,10 +23,9 @@ const LoginPage = () => {
       <div className="login-form">
         <div className="logo-section">
           <img src="default.jpg" alt="WellnessTrack Logo" className="logo" />
-          <h2>WellnessTrack</h2>
         </div>
         <form onSubmit={handleLogin}>
-          <h3>Login Patient</h3>
+          <h3>Login</h3>
           <div className="form-group">
             <label>User Name</label>
             <input

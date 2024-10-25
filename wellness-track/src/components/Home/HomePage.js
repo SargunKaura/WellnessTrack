@@ -29,6 +29,15 @@ const HomePage = () => {
                     <img src="/Health2.jpg" alt="HealthCare" />
                 </div>
             </main>
+
+            <footer className="footer">
+                <div className="footer-content">
+                    <p>Contact Us</p>
+                    <p>Email: contact@wellnesstrack.com</p>
+                    <p>Phone: +1 800 123 4567</p>
+                    <p>Address: 123 Wellness St., Health City, Country</p>
+                </div>
+            </footer>
         </div>
     );
 };

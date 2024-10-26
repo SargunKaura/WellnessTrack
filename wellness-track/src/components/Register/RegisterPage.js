@@ -25,58 +25,76 @@ function RegisterPage() {
     };
 
     return (
-        <div 
-            className="register-container" 
-            style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/Register.jpg'})` }}
-        >
-            <div className="form-container">
-                <h2>Register</h2>
-                <form onSubmit={handleSubmit}>
-                    <label htmlFor="username">User Name</label>
-                    <input 
-                        type="text" 
-                        id="username" 
-                        name="username" 
-                        value={formData.username} 
-                        onChange={handleChange} 
-                        required 
-                    />
+        <div className="register-container" >
+            <div className="header">
+                <header>
+                    <nav className="navbar">
+                        <a href="/">
+                        <div className="logo"> 
+                            <img src="/Logo1.png" alt="WellnessTrack Logo" />
+                        </div>
+                        </a>
+                        <div className="auth-buttons">
+                        <a href="/login">
+                            <button className="login-btn">Login</button>
+                        </a>
+                        <a href="/register">
+                            <button className="signup-btn">Register</button>
+                        </a>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+            <div className="register-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/Register.jpg'})` }}>
+                <div className="form-container">
+                    <h2>Register</h2>
+                    <form onSubmit={handleSubmit}>
+                        <label htmlFor="username">User Name</label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            value={formData.username} 
+                            onChange={handleChange} 
+                            required 
+                        />
 
-                    <label htmlFor="email">Email</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        value={formData.email} 
-                        onChange={handleChange} 
-                        required 
-                    />
+                        <label htmlFor="email">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            value={formData.email} 
+                            onChange={handleChange} 
+                            required 
+                        />
 
-                    <label htmlFor="password">Password</label>
-                    <input 
-                        type="password" 
-                        id="password" 
-                        name="password" 
-                        value={formData.password} 
-                        onChange={handleChange} 
-                        required 
-                    />
+                        <label htmlFor="password">Password</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            value={formData.password} 
+                            onChange={handleChange} 
+                            required 
+                        />
 
-                    <label htmlFor="confirmPassword">Confirm Password</label>
-                    <input 
-                        type="password" 
-                        id="confirmPassword" 
-                        name="confirmPassword" 
-                        value={formData.confirmPassword} 
-                        onChange={handleChange} 
-                        required 
-                    />
+                        <label htmlFor="confirmPassword">Confirm Password</label>
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            name="confirmPassword" 
+                            value={formData.confirmPassword} 
+                            onChange={handleChange} 
+                            required 
+                        />
 
-                    <button type="submit" className="register-button">Register</button>
-                </form>
-                <p>
-                    Already have an account? <a href="/login">Login here</a>
-                </p>
+                        <button type="submit" className="register-button">Register</button>
+                    </form>
+                    <p>
+                        Already have an account? <a href="/login">Login here</a>
+                    </p>
+                </div>
             </div>
         </div>
     );

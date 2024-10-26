@@ -11,9 +11,7 @@ const LoginPage = () => {
     e.preventDefault();
     // Login logic here
 
-
-
-
+    
     console.log("Username:", username);
     console.log("Password:", password);
   };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
 import './RegisterPage.css';
 
 function RegisterPage() {
@@ -6,7 +6,10 @@ function RegisterPage() {
         username: '',
         password: '',
         email: '',
-        confirmPassword: ''
+        confirmPassword: '',
+        phone: '',             // New field for contact phone number
+        dateOfBirth: '',       // New field for date of birth
+        healthID: ''          // New field for health ID
     });
 
     const handleChange = (e) => {
@@ -25,22 +28,22 @@ function RegisterPage() {
     };
 
     return (
-        <div className="register-container" >
+        <div className="register-container">
             <div className="header">
                 <header>
                     <nav className="navbar">
                         <a href="/">
-                        <div className="logo"> 
-                            <img src="/Logo1.png" alt="WellnessTrack Logo" />
-                        </div>
+                            <div className="logo"> 
+                                <img src="/Logo1.png" alt="WellnessTrack Logo" />
+                            </div>
                         </a>
                         <div className="auth-buttons">
-                        <a href="/login">
-                            <button className="login-btn">Login</button>
-                        </a>
-                        <a href="/register">
-                            <button className="signup-btn">Register</button>
-                        </a>
+                            <a href="/login">
+                                <button className="login-btn">Login</button>
+                            </a>
+                            <a href="/register">
+                                <button className="signup-btn">Register</button>
+                            </a>
                         </div>
                     </nav>
                 </header>
@@ -65,6 +68,36 @@ function RegisterPage() {
                             id="email" 
                             name="email" 
                             value={formData.email} 
+                            onChange={handleChange} 
+                            required 
+                        />
+
+                        <label htmlFor="phone">Contact Phone Number</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            value={formData.phone} 
+                            onChange={handleChange} 
+                            required 
+                        />
+
+                        <label htmlFor="dateOfBirth">Date of Birth</label>
+                        <input 
+                            type="date" 
+                            id="dateOfBirth" 
+                            name="dateOfBirth" 
+                            value={formData.dateOfBirth} 
+                            onChange={handleChange} 
+                            required 
+                        />
+
+                        <label htmlFor="healthID">Health ID</label>
+                        <input 
+                            type="text" 
+                            id="healthID" 
+                            name="healthID" 
+                            value={formData.healthID} 
                             onChange={handleChange} 
                             required 
                         />
@@ -96,6 +129,15 @@ function RegisterPage() {
                     </p>
                 </div>
             </div>
+
+            <footer className="footer">
+                <div className="footer-content">
+                    <p>Contact Us</p>
+                    <p>Email: contact@wellnesstrack.com</p>
+                    <p>Phone: +1 800 123 4567</p>
+                    <p>Address: 123 Wellness St., Health City, Country</p>
+                </div>
+            </footer>
         </div>
     );
 }

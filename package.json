@@ -1,5 +1,17 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.11.4",
     "react-router-dom": "^6.27.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server/server.js",
+    "client": "cd wellness-track && npm start"
   }
 }

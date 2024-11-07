@@ -1,0 +1,27 @@
+/* admin-dashboard.css */
+.admin-dashboard {
+    padding: 20px;
+  }
+  
+  .create-account {
+    margin-bottom: 20px;
+  }
+  
+  .create-account input, .create-account select {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .accounts-list {
+    margin-top: 20px;
+  }
+  
+  .accounts-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .accounts-list li {
+    margin: 5px 0;
+  }
+  

@@ -34,6 +34,24 @@ const PatientProfile = () => {
 
     return (
         <div>
+<header>
+                <nav className="navbar">
+                    <a href="/">
+                        <div className="logo"> 
+                            <img src="/Logo1.png" alt="WellnessTrack Logo" />
+                        </div>
+                    </a>
+                    <div className="auth-buttons">
+                        <a href="/login">
+                            <button className="login-btn">Login</button>
+                        </a>
+                        <a href="/register">
+                            <button className="signup-btn">Register</button>
+                        </a>
+                    </div>
+                </nav>
+            </header>
+
             <h2>Patient Profile</h2>
             <form>
                 <label>Name:</label>
@@ -48,6 +66,15 @@ const PatientProfile = () => {
                 <input type="text" name="healthId" value={profile.healthId} onChange={handleChange} />
                 <button type="button" onClick={handleSave}>Save</button>
             </form>
+
+            <footer className="footer">
+                <div className="footer-content">
+                    <p>Contact Us</p>
+                    <p>Email: contact@wellnesstrack.com</p>
+                    <p>Phone: +1 800 123 4567</p>
+                    <p>Address: 123 Wellness St., Health City, Country</p>
+                </div>
+            </footer>
         </div>
     );
 };
